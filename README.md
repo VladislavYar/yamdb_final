@@ -1,4 +1,4 @@
-[![Yamdb_workflow Actions Status](https://github.com/VladislavYar/yamdb_final/workflows/Yamdb_workflow/badge.svg)](https://github.com/VladislavYar/yamdb_final/actions)
+[![Yamdb_workflow Actions Status](https://github.com/VladislavYar/yamdb_final/workflows/Yamdb_workflow/badge.svg)]
 
 ## Описание
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Title). Произведения делятся на категории:
