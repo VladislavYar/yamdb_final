@@ -58,9 +58,10 @@ jobs:
             key: ${{ secrets.SSH_KEY }}
             passphrase: ${{ secrets.PASSPHRASE }}
             script: |
-              cd yamdb_final/infra/
+              rwd
               sudo docker-compose stop
               sudo docker-compose rm web
+              cd yamdb_final/infra/
               touch .env
               echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
               echo DB_NAME=${{ secrets.DB_NAME }} >> .env
