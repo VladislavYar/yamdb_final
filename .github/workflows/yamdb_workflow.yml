@@ -60,7 +60,6 @@ jobs:
             script: |
               sudo docker-compose stop
               sudo docker-compose rm web
-              y
               touch .env
               echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
               echo DB_NAME=${{ secrets.DB_NAME }} >> .env
@@ -69,9 +68,6 @@ jobs:
               echo DB_HOST=${{ secrets.DB_HOST }} >> .env
               echo DB_PORT=${{ secrets.DB_PORT }} >> .env
               sudo docker-compose up -d
-              sudo docker-compose exec web python manage.py makemigrations
-              sudo docker-compose exec web python manage.py migrate
-              sudo docker-compose exec web python manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
