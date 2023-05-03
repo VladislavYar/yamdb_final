@@ -1,6 +1,6 @@
+from api.permissions import IsAdminUserOrReadOnly
 from rest_framework import filters, mixins, viewsets
 
-from api.permissions import IsAdminUserOrReadOnly
 from .validators import validate_username
 
 

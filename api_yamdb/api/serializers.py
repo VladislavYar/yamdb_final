@@ -1,11 +1,9 @@
+from core.mixins import UsernameMixin
+from core.validators import validate_year
 from django.conf import settings
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
-
-from core.mixins import UsernameMixin
-from reviews.models import (
-    Category, Comment, Genre, Review, Title, User)
-from core.validators import validate_year
+from reviews.models import Category, Comment, Genre, Review, Title, User
 
 
 class AdminSerializer(serializers.ModelSerializer, UsernameMixin):

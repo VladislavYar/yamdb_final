@@ -3,7 +3,6 @@ import sqlite3
 
 from django.core.management.base import BaseCommand
 
-
 FILES_CSV = {
     'category.csv': 'reviews_category', 'genre.csv': 'reviews_genre',
     'titles.csv': 'reviews_title', 'users.csv': 'reviews_user',

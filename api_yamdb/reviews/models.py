@@ -1,11 +1,9 @@
-from django.core.validators import MaxValueValidator, MinValueValidator
-from django.contrib.auth.models import AbstractUser
-from django.conf import settings
-from django.db import models
-
-from core.validators import validate_username, validate_year
 from core.models import NameSlugModel, Note
-
+from core.validators import validate_username, validate_year
+from django.conf import settings
+from django.contrib.auth.models import AbstractUser
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
 
 USER = 'user'
 ADMIN = 'admin'
