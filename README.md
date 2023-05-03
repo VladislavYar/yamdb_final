@@ -16,7 +16,7 @@
 рейтинг (оценку в диапазоне от одного до десяти). Из множества оценок автоматически высчитывается средняя
 оценка произведения.
 
-## Шаблон наполнения env-файла
+## Шаблон наполнения env-файла(так же аналогично для Secrets Actions)
 - DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
 - DB_NAME=postgres # имя базы данных
 - POSTGRES_USER=postgres # логин для подключения к базе данных
@@ -24,6 +24,16 @@
 - DB_HOST=db # название сервиса (контейнера)
 - DB_PORT=5432 # порт для подключения к БД 
 
+## Шаблон наполнения Secrets Actions
+Обратите внимание что в проекте имеется CI/CD(GitHub Actions)
+- DOCKER_USERNAME=<ваш_username_dockerhub>
+- DOCKER_PASSWORD=<ваш_пароль_dockerhub>
+- HOST=<IP-адрес_вашего_сервера>
+- USER=<имя_пользователя_для_подключения_к_серверу>
+- SSH_KEY=<ssh-ключ_пользователя_для_подключения_к_серверу>
+- PASSPHRASE=<фраза-пароль_для_доступа_к_ssh-ключу> # если такой имеется
+- TELEGRAM_TO=<ID-аккаунта>
+- TELEGRAM_TOKEN=<токен_бота>
 
 ## Как запустить проект:
 
@@ -33,13 +43,19 @@ cd
 ```
 Клонируйте репозиторий:
 ```
-git clone git@github.com:VladislavYar/infra_sp2.git
+git clone git@github.com:VladislavYar/yamdb_final.git
 ```
 ### На данном этапе создайте env-файл по шаблону из раздела выше
 
-Далее перейдите в каталог приложения, папку инфраструктуры:
+Перейдите в каталог конфигурации nginx и поменяйте данные поля server_name в файле default.conf на IP(домен) Вашего сервера:
 ```
-cd infra_sp2/infra/
+cd yamdb_final/infra/nginx/
+sudo nano default.conf
+```
+
+Далее перейдите в папку инфраструктуры:
+```
+cd ..
 ```
 Запустите docker-compose командой:
 ```
