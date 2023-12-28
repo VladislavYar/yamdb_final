@@ -16,6 +16,9 @@
 рейтинг (оценку в диапазоне от одного до десяти). Из множества оценок автоматически высчитывается средняя
 оценка произведения.
 
+## Cтек проекта
+Python v3.9, Django, DRF, postgreSQL, Docker
+
 ## Шаблон наполнения env-файла(так же аналогично для Secrets Actions)
 - DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
 - DB_NAME=postgres # имя базы данных
